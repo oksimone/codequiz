@@ -1,52 +1,97 @@
-var myQuestions = [
-    {
-      question: "Who invented JavaScript?",
-      answers: {
-        a: "Douglas Crockford",
-        b: "Sheryl Sandberg",
-        c: "Brendan Eich"
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "Which one of these is a JavaScript package manager?",
-      answers: {
-        a: "Node.js",
-        b: "TypeScript",
-        c: "npm"
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "Which tool can you use to ensure code quality?",
-      answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
-      },
-      correctAnswer: "d"
-    },
-    {
-        question: "Which tool can you use to ensure code quality?",
-        answers: {
-          a: "Angular",
-          b: "jQuery",
-          c: "RequireJS",
-          d: "ESLint"
-        },
-        correctAnswer: "d"
-      },
-      {
-        question: "Which tool can you use to ensure code quality?",
-        answers: {
-          a: "Angular",
-          b: "jQuery",
-          c: "RequireJS",
-          d: "ESLint"
-        },
-        correctAnswer: "d"
-      }
+var container = document.getElementById('.container');
+var highscore = document.getElementById('.highscore');
+var timer = document.getElementById('.timer');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var myQuestions = [
+//     {
+//       question: "Finish the senctence: Kim, there's people that are _____.",
+//       answers: {
+//         a: "Eating,
+//         b: "Sleeping",
+//         c: "Crying",
+//         d. "Dying"
+//       },
+//       correctAnswer: "d"
+//     },
+//     {
+//       question: "Who is Kim Kardashian married to?",
+//       answers: {
+//         a: "Ray Jay",
+//         b: "Kanye West",
+//         c: "Reggie Bush"
+//         d: "Trick question, she's not married."
+//       },
+//       correctAnswer: "b"
+//     },
+//     {
+//       question: "What's the name of Kourtney's youngest child",
+//       answers: {
+//         a: "Mason",
+//         b: "Reign",
+//         c: "Ashton",
+//         d: "Penelope"
+//       },
+//       correctAnswer: "b"
+//     },
+//     {
+//         question: "Who said this line: "You're doing amazing sweetie."",
+//         answers: {
+//           a: "Kourtney",
+//           b: "Kylie",
+//           c: "Kim",
+//           d: "Kris"
+//         },
+//         correctAnswer: "d"
+//       },
+//       {
+//         question: "Finish that line: "Kim, would you stop taking pictures of yourself. Your sister's going to ____?",
+//         answers: {
+//           a: "The mall",
+//           b: "School",
+//           c: "Jail",
+//           d: "Paris"
+//         },
+//         correctAnswer: "d"
+//       }
     
-  ];
-  
+//   ];
+
+ 
