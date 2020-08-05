@@ -1,7 +1,10 @@
 var container = document.getElementById('.container');
 var highscore = document.getElementById('.highscore');
 var timer = document.getElementById('.timer');
-var question = document.getElementById(".question-container").style.display = "none'"
+// hide display from the start screen
+
+document.getElementById("question-container").style.display = "none";
+
 
 
 
