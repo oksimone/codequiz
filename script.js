@@ -97,10 +97,11 @@ function begin() {
     else {
         //display "Correct"
     }
+}
 //curentIndex++
-if ()
-myQuestionsArrofObj[currentIndex] = myQuestionsArrofObj.
-   } 
-//    take you to the submit page
-begin();
+// if ()
+// myQuestionsArrofObj[currentIndex] = myQuestionsArrofObj.
+//    } 
+// //    take you to the submit page
+// begin();
 
