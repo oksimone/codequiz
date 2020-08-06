@@ -5,13 +5,7 @@ var answerbtn = document.querySelector("#answer-questions");
 var startbtn = document.querySelector("#start");
 var questionContain = document.querySelector('.question-container')
 var startScreen = document.querySelector(".startscreen");
-
-
-
-
-
-
-
+var currentIndex = 0
 
 
 var timerInterval;
@@ -27,33 +21,33 @@ var myQuestionsArrofObj = [
         question: "Finish the senctence: Kim, there's people that are _____.",
         answer: "Dying",
         answerList: ["Eating", "Sleeping", "Crying", "Dying"],
-        correctAnswer: 3
+        
     },
 
     {
         question: "Whose Instagram handle is: &commat;letthelordbewithyou?",
         answer: "Scott Disick",
         answerList: ["Kourtney Kardashian", "Kylie Jenner", "Scott Disick", "Sofia Richie."],
-        correctAnswer: 2
+        
 
     },
     {
         question: "What's Kylie Jenners daughters name? ",
         answer: "Stormi",
         answerList: ["Reign", "Chicago", "Dream", "Stormi"],
-        correctAnswer: 3
+       
     },
     {
         question: "Who said this iconic line?: You&apos;re doing amazing sweetie.",
         answer: "Kim",
         answerList: ["Kourtney", "Kim", "Kris", "Kylie"],
-        correctAnswer: 2
+        
     },
     {
         question: "Finish that line:, Kim, would you stop taking pictures of yourself. Your sister's going to ____?",
         answers: "Jail",
         answerList: ["Jail", "School", "The Mall", "Paris"],
-        correctAnswer: 0
+        
     }
 
 ];
@@ -80,8 +74,22 @@ function begin() {
 
         }, 1000);
 
+        var currentQuestion = myQuestionsArrofObj[currentIndex]
+        var questionTitle = document.querySelector("#question");
+        questionTitle.textContent = currentQuestion.question;
+        for (var i =0; i < currentQuestion.answerList.length; i++){
+            var answers = document.createElement("button");
+            answers.setAttribute('value', currentQuestion.answerList[i])
+            var answerbtn = document.querySelector("#answer-buttons");
+            answers.textContent = currentQuestion.answerList[i];
+            answerbtn.appendChild(answers);
+            answers.onclick = answerClick;
+        }
+
     }
 }
+   function answerClick(){
 
+   }
 begin();
 
