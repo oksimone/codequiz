@@ -8,13 +8,17 @@ var startScreen = document.querySelector(".startscreen");
 
 
 
+
+
+
+
+
+
 var timerInterval;
 var time = 0;
 var timeCap = 45;
 var myQuestionsArrofObj = 0;
 // hide display from the start screen
-
-
 
 
 
@@ -62,16 +66,16 @@ function begin() {
         startScreen.setAttribute("style", "display: none !important");
         questionContain.setAttribute("style", "display: block !important");
 
+
         var secondsLeft = 45
         var timeInterval = setInterval(function () {
 
-            secondsLeft--;
             timerEl.textContent = "Time: " + secondsLeft;
-
+            secondsLeft--;
+            
             if (secondsLeft === 0) {
-                timerEl.textContent = "";
+                timerEl.textContent = "Time: 0";
                 clearInterval(timerInterval);
-                // sendMessage();
             }
 
         }, 1000);
@@ -79,5 +83,5 @@ function begin() {
     }
 }
 
-
+begin();
 
