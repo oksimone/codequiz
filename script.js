@@ -89,7 +89,18 @@ function begin() {
     }
 }
    function answerClick(){
-
-   }
+    if(this.value !== myQuestionsArrofObj[currentIndex].answer){
+        //time will be substracted
+        //create another if statement, if time <= 0. Then take you to the submit page
+        //display "incorrect"
+    }
+    else {
+        //display "Correct"
+    }
+//curentIndex++
+if ()
+myQuestionsArrofObj[currentIndex] = myQuestionsArrofObj.
+   } 
+//    take you to the submit page
 begin();
 
