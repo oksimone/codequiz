@@ -17,28 +17,30 @@
     <!-- Nav Bar -->
     <nav class="navbar navbar-light bg-light">
         <button type="button" class="btn btn-outline-dark">View Highscore</button>
-        <span class="timer">Time:</span> 
+        <span class="timer">Time:</span>
     </nav>
     <!-- Container with questions, header, and description of quiz -->
     <main class="container text-center">
-        <h1 class="m-4">Keeping up with the Kardashian Quiz</h1>
-        <p class = "mb-4">Welcome to "Keeping up with the Kardashian's Quiz. </p>
-        <button id="start">Start Quiz</button>
+        <section class="startscreen">
+            <h1 class="m-4">Keeping up with the Kardashian Quiz</h1>
+            <p class="mb-4">Welcome to "Keeping up with the Kardashian's Quiz. </p>
+            <button id="start">Start Quiz</button>
+        </section>
 
-        <div id="question-container">
-        <div id="question">Question</div>
-        <div id="answer-buttons">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Answer 1</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block">Answer 2</button>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Answer 3</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block">Answer 4</button>
+        <div class ="question-container d-none">
+            <div id="question">Question</div>
+            <div id="answer-buttons">
+                <button type="button1" class="btn btn-primary btn-lg btn-block">Answer 1</button>
+                <button type="button2" class="btn btn-secondary btn-lg btn-block">Answer 2</button>
+                <button type="button3" class="btn btn-primary btn-lg btn-block">Answer 3</button>
+                <button type="button4" class="btn btn-secondary btn-lg btn-block">Answer 4</button>
+            </div>
         </div>
-    </div>
 
 
 
-        <div id="results"></div>
-</main>
+        <!-- <div id="results"></div> -->
+    </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="script.js"></script>
