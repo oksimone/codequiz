@@ -21,33 +21,33 @@ var myQuestionsArrofObj = [
         question: "Finish the sentence: Kim, there's people that are _____.",
         answer: "Dying",
         answerList: ["Eating", "Sleeping", "Crying", "Dying"],
-        
+
     },
 
     {
         question: "Whose Instagram handle is: @letthelordbewithyou?",
         answer: "Scott Disick",
         answerList: ["Kourtney Kardashian", "Kylie Jenner", "Scott Disick", "Sofia Richie."],
-        
+
 
     },
     {
         question: "What's Kylie Jenners daughters name? ",
         answer: "Stormi",
         answerList: ["Reign", "Chicago", "Dream", "Stormi"],
-       
+
     },
     {
         question: "Who said this iconic line?: You&apos;re doing amazing sweetie.",
         answer: "Kim",
         answerList: ["Kourtney", "Kim", "Kris", "Kylie"],
-        
+
     },
     {
         question: "Finish that line:, Kim, would you stop taking pictures of yourself. Your sister's going to ____?",
         answers: "Jail",
         answerList: ["Jail", "School", "The Mall", "Paris"],
-        
+
     }
 
 ];
@@ -66,10 +66,11 @@ function begin() {
 
             timerEl.textContent = "Time: " + secondsLeft;
             secondsLeft--;
-            
-            if (secondsLeft === 0) {
+
+            if (secondsLeft === -1) {
                 timerEl.textContent = "Time: 0";
-                clearInterval(timerInterval);
+                clearInterval();
+
             }
 
         }, 1000);
@@ -77,23 +78,22 @@ function begin() {
         var currentQuestion = myQuestionsArrofObj[currentIndex]
         var questionTitle = document.querySelector("#question");
         questionTitle.textContent = currentQuestion.question;
-        for (var i =0; i < currentQuestion.answerList.length; i++){
+        for (var i = 0; i < currentQuestion.answerList.length; i++) {
             var answers = document.createElement("button");
             answers.setAttribute('value', currentQuestion.answerList[i])
             var answerbtn = document.querySelector("#answer-buttons");
             answers.textContent = currentQuestion.answerList[i];
             answerbtn.appendChild(answers);
             answers.onclick = answerClick;
+
         }
 
     }
 }
 
-   function answerClick(){
+function answerClick() {
     //    if function saying if the answer is incorrect
-    if(this.value !== myQuestionsArrofObj[currentIndex].answer){
-        var text = document.querySelector('output');
-        text.innerText =  ("Wrong!");
+    if (this.value !== myQuestionsArrofObj[currentIndex].answer) {
         currentIndex++;
         //time will be substracted
         //create another if statement, if time <= 0. Then take you to the submit page
@@ -103,7 +103,7 @@ function begin() {
         //display "Correct"
         document.write = ("Correct!");
         currentIndex++;
-        
+
     }
 }
 
@@ -111,6 +111,6 @@ function begin() {
 // myQuestionsArrofObj[currentIndex] = myQuestionsArrofObj.
 //    } 
 // //    take you to the submit page
-// begin();
+
 
 
