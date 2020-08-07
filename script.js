@@ -7,7 +7,8 @@ var questionContain = document.querySelector('.question-container')
 var startScreen = document.querySelector(".startscreen");
 var currentIndex = 0
 
-
+var timeInterval
+var secondsLeft = 45
 var timerInterval;
 var time = 0;
 var timeCap = 45;
@@ -38,7 +39,7 @@ var myQuestionsArrofObj = [
 
     },
     {
-        question: "Who said this iconic line?: You&apos;re doing amazing sweetie.",
+        question: "Who said this iconic line?: You're doing amazing sweetie.",
         answer: "Kim",
         answerList: ["Kourtney", "Kim", "Kris", "Kylie"],
 
@@ -54,56 +55,67 @@ var myQuestionsArrofObj = [
 
 startbtn.addEventListener("click", begin)
 
+function startTime() {
 
-function begin() {
-    if (event.target.matches("button")) {
-        startScreen.setAttribute("style", "display: none !important");
-        questionContain.setAttribute("style", "display: block !important");
+    timeInterval = setInterval(function () {
 
+        timerEl.textContent = "Time: " + secondsLeft;
+        secondsLeft--;
 
-        var secondsLeft = 45
-        var timeInterval = setInterval(function () {
-
-            timerEl.textContent = "Time: " + secondsLeft;
-            secondsLeft--;
-
-            if (secondsLeft === -1) {
-                timerEl.textContent = "Time: 0";
-                clearInterval();
-
-            }
-
-        }, 1000);
-
-        var currentQuestion = myQuestionsArrofObj[currentIndex]
-        var questionTitle = document.querySelector("#question");
-        questionTitle.textContent = currentQuestion.question;
-        for (var i = 0; i < currentQuestion.answerList.length; i++) {
-            var answers = document.createElement("button");
-            answers.setAttribute('value', currentQuestion.answerList[i])
-            var answerbtn = document.querySelector("#answer-buttons");
-            answers.textContent = currentQuestion.answerList[i];
-            answerbtn.appendChild(answers);
-            answers.onclick = answerClick;
-
+        if (secondsLeft <= 0) {
+            timerEl.textContent = "Time: 0";
+            secondsLeft = 0
+            clearInterval(timeInterval);
+            console.log('end game')
         }
+
+    }, 1000);
+}
+function writeQuestion() {
+    
+    var currentQuestion = myQuestionsArrofObj[currentIndex]
+    var questionTitle = document.querySelector("#question");
+    questionTitle.textContent = currentQuestion.question;
+    var answerbtn = document.querySelector("#answer-buttons");
+    answerbtn.innerHTML =""
+    for (var i = 0; i < currentQuestion.answerList.length; i++) {
+        var answers = document.createElement("button");
+        answers.setAttribute('value', currentQuestion.answerList[i])
+        answers.textContent = currentQuestion.answerList[i];
+        answerbtn.appendChild(answers);
+        answers.onclick = answerClick;
 
     }
 }
+function begin() {
+
+    startScreen.setAttribute("style", "display: none !important");
+    questionContain.setAttribute("style", "display: block !important");
+    startTime()
+    writeQuestion()
+
+
+
+}
 
 function answerClick() {
+    console.log(this.value)
     //    if function saying if the answer is incorrect
     if (this.value !== myQuestionsArrofObj[currentIndex].answer) {
-        currentIndex++;
+        secondsLeft = secondsLeft - 15
         //time will be substracted
         //create another if statement, if time <= 0. Then take you to the submit page
         //display "incorrect"
     }
-    else {
-        //display "Correct"
-        document.write = ("Correct!");
-        currentIndex++;
 
+
+    currentIndex++;
+
+    if(currentIndex === myQuestionsArrofObj.length){
+        console.log('end game')
+    }else{
+
+        writeQuestion()
     }
 }
 
