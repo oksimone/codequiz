@@ -25,7 +25,7 @@ var myQuestionsArrofObj = [
     },
 
     {
-        question: "Whose Instagram handle is: &commat;letthelordbewithyou?",
+        question: "Whose Instagram handle is: @letthelordbewithyou?",
         answer: "Scott Disick",
         answerList: ["Kourtney Kardashian", "Kylie Jenner", "Scott Disick", "Sofia Richie."],
         
@@ -88,20 +88,29 @@ function begin() {
 
     }
 }
+
    function answerClick(){
+    //    if function saying if the answer is incorrect
     if(this.value !== myQuestionsArrofObj[currentIndex].answer){
+        var text = document.querySelector('output');
+        text.innerText =  ("Wrong!");
+        currentIndex++;
         //time will be substracted
         //create another if statement, if time <= 0. Then take you to the submit page
         //display "incorrect"
     }
     else {
         //display "Correct"
+        document.write = ("Correct!");
+        currentIndex++;
+        
     }
 }
-//curentIndex++
+
 // if ()
 // myQuestionsArrofObj[currentIndex] = myQuestionsArrofObj.
 //    } 
 // //    take you to the submit page
 // begin();
+
 
