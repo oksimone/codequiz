@@ -18,7 +18,7 @@ var myQuestionsArrofObj = 0;
 
 var myQuestionsArrofObj = [
     {
-        question: "Finish the senctence: Kim, there's people that are _____.",
+        question: "Finish the sentence: Kim, there's people that are _____.",
         answer: "Dying",
         answerList: ["Eating", "Sleeping", "Crying", "Dying"],
         

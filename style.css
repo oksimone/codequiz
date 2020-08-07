@@ -1,7 +1,15 @@
-#answers{
+body {
+    /* gradients from egggradients.com */
+    background-color: #ffd9de;
+    background-image: linear-gradient(315deg, #ffd9de 0%, #e99ba6 74%);
+    font-family: 'Inria Serif', serif;
+
+}
+
+#answerList{
     padding: 15px 100px;
-    margin: 10px 4px;
-    background-color: lavender;
+    margin: 0px 4px;
+    background-color: whitesmoke;
     font-family: sans-serif;
     text-transform: uppercase;
     text-align: center;
@@ -10,10 +18,10 @@
     display: inline-block;
     border: 1px solid;
 }
-#start {
-    padding: 15px 100px;
+button {
+    padding: 8px 60px;
     margin: 10px 4px;
-    background-color: lavender;
+   transition-duration: 0.4s;
     font-family: sans-serif;
     text-transform: uppercase;
     text-align: center;
@@ -21,4 +29,16 @@
     text-decoration: none;
     display: inline-block;
     border: 1px solid;
+    border-radius: 30px 30px 30px 30px;
+    font-family: 'Inria Serif', serif;
+}
+
+button:hover {
+    background-color: white;
+    color: pink;
+}
+#question {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 18px;
 }
